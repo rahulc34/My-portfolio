@@ -11,15 +11,15 @@ export const profile = {
     "Competitive Programmer",
   ],
   tagline:
-    "I design RESTful APIs and build full-stack applications that ship to production — from CI tooling and real-time pipelines.",
-  location: "Uttar pradesh, India",
+    "I design RESTful APIs and build full-stack applications that ship to production — from CI tooling and real-time pipelines to sandboxed code execution.",
+  location: "Uttar Pradesh, India",
   email: "rahul.connectt@gmail.com",
   linkedin: "https://www.linkedin.com/in/rahul-chaurasiya-42a971326/",
   github: "https://github.com/rahulc34",
   // TODO: replace with your real Google Drive share link
   // (Drive → right-click resume → Share → "Anyone with the link" → Copy link)
   resume: "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
-  photo: "/profile.webp",
+  photo: `${import.meta.env.BASE_URL}profile.webp`,
 };
 
 export const education = {
@@ -34,23 +34,26 @@ export const experience = [
   {
     role: "SWE Intern",
     company: "Rocketium",
-    period: "Jan 2026 – Jul 2026",
+    period: "Jan 2026 – Jun 2026",
     mode: "Hybrid",
     // Short points shown on the site
     highlights: [
-      "Built and optimized REST APIs in Node.js + TypeScript with PostgreSQL.",
-      "Built a self-hosted test-reporting platform, replacing a $100/mo SaaS tool.",
-      "Published an npm package that streams CI test results to the backend in real time.",
-      "Stored artifacts on AWS S3 and deployed the full stack on AWS.",
+      "Wrote the HLD and built a self-hosted Playwright test-reporting platform, replacing a $100/mo SaaS tool.",
+      "Built a TypeScript Playwright reporter, published on npm, that streams CI test results to the backend in real time.",
+      "Deployed on AWS: EC2 backend, PostgreSQL on RDS, artifacts in S3, frontend on S3 + CloudFront.",
+      "Built a GitHub Actions workflow to run selected test suites on demand instead of the 30–40 min full suite.",
+      "Integrated Slack notifications for 4 user activities and PostHog analytics across the frontend.",
+      "Resolved 50+ UI bugs across production Node.js/TypeScript repositories.",
     ],
     stack: [
       "TypeScript",
       "Node.js",
-      "Express",
       "PostgreSQL",
-      "AWS S3",
-      "React",
+      "AWS",
       "Playwright",
+      "GitHub Actions",
+      "Slack API",
+      "PostHog",
       "npm",
     ],
   },
@@ -61,9 +64,9 @@ export const projects = [
     name: "CloudIDE",
     subtitle: "Full-Stack Online Code Editor",
     description:
-      "An online coding platform with Monaco Editor and sandboxed execution for C++, Java, Python and JavaScript.",
+      "An online coding platform with Monaco Editor and sandboxed execution for C++, Java, Python, JavaScript and TypeScript.",
     features: [
-      "Monaco Editor with syntax highlighting and multi-language execution (C++, Java, Python, JS).",
+      "Monaco Editor with syntax highlighting and multi-language execution (C++, Java, Python, JS, TS).",
       "RESTful APIs in Node.js, Express and TypeScript with MongoDB for persistence and sessions.",
       "Asynchronous execution with Redis + BullMQ, processing jobs through dedicated workers.",
       "Docker-based sandboxing with resource limits and process isolation for untrusted code.",
@@ -79,11 +82,11 @@ export const projects = [
       "BullMQ",
       "Docker",
       "GCP",
+      "Nginx",
       "CI/CD",
-      "GOOGLE CLOUD",
     ],
     live: "https://www.cloudide.in/",
-    image: "/projects/cloudide.png",
+    image: `${import.meta.env.BASE_URL}projects/cloudide.png`,
     github: "https://github.com/rahulc34/online-compiler-backend",
     accent: "#22c55e",
   },
@@ -109,7 +112,7 @@ export const projects = [
       "Tailwind CSS",
     ],
     live: "https://playbox-ontf.onrender.com/",
-    image: "/projects/playbox.png",
+    image: `${import.meta.env.BASE_URL}projects/playbox.png`,
     github: "https://github.com/rahulc34/PlayBox",
     accent: "#f97316",
   },
@@ -127,8 +130,23 @@ export const skills = {
     "Express.js",
     "REST APIs",
   ],
-  "Databases & Cloud": ["PostgreSQL", "MongoDB", "AWS (S3, EC2, RDS, Lambda)"],
-  Tools: ["Git", "GitHub", "CI/CD", "Docker", "Playwright", "Postman"],
+  "Databases & Cloud": [
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "AWS (S3, EC2, RDS, CloudFront, Lambda)",
+    "GCP",
+    "Firebase",
+  ],
+  Tools: [
+    "Git",
+    "GitHub Actions",
+    "Docker",
+    "Nginx",
+    "Linux",
+    "Playwright",
+    "Postman",
+  ],
   Fundamentals: [
     "DSA",
     "OOP",
@@ -140,10 +158,9 @@ export const skills = {
 };
 
 export const codingProfiles = [
-  // TODO: replace url values with your exact profile links
   {
     platform: "LeetCode",
-    solved: 1100,
+    solved: 900,
     rating: 1938,
     color: "#f59e0b",
     url: "https://leetcode.com/u/skullnight/",
@@ -165,6 +182,6 @@ export const codingProfiles = [
 ];
 
 export const achievements = [
-  { rank: 956, text: "Global rank in a LeetCode Weekly Contest" },
+  { rank: 720, text: "Global rank in LeetCode Weekly Contest 492" },
   { rank: 550, text: "Global rank in CodeChef Starters 124" },
 ];

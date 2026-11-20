@@ -214,7 +214,7 @@ function Hero() {
 function About() {
   const facts = [
     { v: 8.1, s: "", l: "CGPA at NIT Patna", dec: true },
-    { v: 1300, s: "+", l: "DSA problems solved" },
+    { v: 1000, s: "+", l: "DSA problems solved" },
     { v: 2, s: "", l: "live full-stack products" },
     { v: 1, s: "", l: "npm package published" },
   ];
