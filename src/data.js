@@ -16,9 +16,7 @@ export const profile = {
   email: "rahul.connectt@gmail.com",
   linkedin: "https://www.linkedin.com/in/rahul-chaurasiya-42a971326/",
   github: "https://github.com/rahulc34",
-  // TODO: replace with your real Google Drive share link
-  // (Drive → right-click resume → Share → "Anyone with the link" → Copy link)
-  resume: "https://drive.google.com/file/d/YOUR_FILE_ID/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1zK-NldgKGxIvgVQMIBpHFHdD7y-dC9n_/view?usp=sharing",
   photo: `${import.meta.env.BASE_URL}profile.webp`,
 };
 
